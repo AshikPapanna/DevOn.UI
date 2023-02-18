@@ -35,7 +35,7 @@ import { DialogComponent } from './components/dialog/dialog.component';
     HttpClientModule,
     MatInputModule,
     MatDialogModule,
-    MatButtonModule,
+    MatButtonModule,  
 
   ],
   exports:[
