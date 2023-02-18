@@ -1,0 +1,38 @@
+<form [formGroup]="createForm" (ngSubmit)="onSubmit()">
+
+    <mat-grid-list cols="3" rowHeight="3:1">
+        <mat-grid-tile> <mat-form-field appearance="outline">
+            <mat-label>Name</mat-label>
+            <input formControlName="name" matInput placeholder="Name">
+            <mat-error *ngIf="createForm.controls['name'].invalid">{{getNameErrorMessage()}}</mat-error>
+            <!-- <ng-container *ngIf="name.invalid || (name.dirty || name.touched)"></ng-container>
+            <ng-container *ngIf="name.errors?.['required']">
+                <mat-error >Please enter the name</mat-error>
+            </ng-container> -->
+        
+          </mat-form-field></mat-grid-tile>
+        <mat-grid-tile> <mat-form-field appearance="outline">
+            <mat-label>Description</mat-label>
+            <textarea formControlName="description" matInput placeholder="Description"></textarea>
+            <mat-error *ngIf="createForm.controls['description'].invalid">{{getDescErrorMessage()}}</mat-error>
+          </mat-form-field></mat-grid-tile>
+        <mat-grid-tile><mat-form-field appearance="outline">
+            <mat-label>Quantity</mat-label>
+            <input type="number" formControlName="quantity" matInput placeholder="Quantity">
+            <mat-error *ngIf="createForm.controls['quantity'].invalid">{{getQuantityErrorMessage()}}</mat-error>
+          </mat-form-field></mat-grid-tile>
+        <mat-grid-tile><mat-form-field appearance="outline">
+            <mat-label>Category</mat-label>
+            <mat-select  [compareWith]="compareFn" formControlName="category">
+                <mat-option *ngFor="let cat of categories" value="{{cat.id}}">{{cat.name}}</mat-option>
+              
+              </mat-select>
+           
+          </mat-form-field></mat-grid-tile>
+      </mat-grid-list>
+   
+     
+      
+      
+      <button mat-raised-button type="submit" [disabled]="!createForm.valid"  color="warn">Submit</button>
+    </form>

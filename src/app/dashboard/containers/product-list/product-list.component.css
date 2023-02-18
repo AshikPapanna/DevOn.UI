@@ -1,0 +1,6 @@
+.flx-cont{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2% 5% 0% 5%;
+}

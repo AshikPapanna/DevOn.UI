@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+mat-drawer{
+    width: 18%;
+}
+table{
+    width: 90%;
+    margin: 2% 5% 2% 5%;
+}
+mat-drawer-container{
+    height: 90%;
+}
+.green-bg{
+  background-color: rgb(38, 194, 38);
+}
+
+.red-bg{
+    background-color: rgb(237, 92, 92);
+  }
+  

@@ -1,0 +1,18 @@
+<app-header-component></app-header-component>
+
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer [opened]="true"  mode="side">
+        <mat-list role="list">
+            <mat-list-item role="listitem" routerLinkActive="active-link" [routerLink]="['product','list']">Products</mat-list-item>
+            <mat-list-item role="listitem">Categories</mat-list-item>           
+          </mat-list>
+    </mat-drawer>
+  
+    <div class="example-sidenav-content">
+        <router-outlet></router-outlet>
+    
+    </div>
+  
+  </mat-drawer-container>
+
+
