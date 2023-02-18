@@ -24,38 +24,38 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 Below is the image of form to enter api key. For testing purpose use "4942956-87b1-4816-b8f5-45483fa05201"
 
-![plot](./src/assets/images/ApiKeyForm.png)
+![plot](./src/assets/readmeimages/images/ApiKeyForm.png)
 
 
 Once logged in dashboard with preloaded product list
 
-![plot](./src/assets/images/listpage.png)
+![plot](./src/assets/readmeimages/images/listpage.png)
 
 Click on Create button to add new product.
 
-![plot](./src/assets/images/createpro.png)
+![plot](./src/assets/readmeimages/images/createpro.png)
 
 The category drop down is populated from api as shown below
 
-![plot](./src/assets/images/cat.png)
+![plot](./src/assets/readmeimages/images/cat.png)
 
 If we want to delete the product please click delete button as shown below
 
-![plot](./src/assets/images/delete.png)
+![plot](./src/assets/readmeimages/images/delete.png)
 
 A popup will be displayed as shown below.Click delete to confirm.
 
-![plot](./src/assets/images/con123.png)
+![plot](./src/assets/readmeimages/images/con123.png)
 
 
 Validation messages will be dispalyed as shown below
 
-![plot](./src/assets/images/vali.png)
+![plot](./src/assets/readmeimages/images/vali.png)
 
 Click product link to go back to list as shown below
 
-![plot](./src/assets/images/back.png)
+![plot](./src/assets/readmeimages/images/back.png)
 
 Any api error the snack bar will be displayed as shown below.
 
-![plot](./src/assets/images/Error.png)
+![plot](./src/assets/readmeimages/images/Error.png)
