@@ -17,6 +17,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatDialogModule} from '@angular/material/dialog';
 import { DialogComponent } from './components/dialog/dialog.component'; 
+import {RouterModule} from '@angular/router'
 
 
 
@@ -36,6 +37,7 @@ import { DialogComponent } from './components/dialog/dialog.component';
     MatInputModule,
     MatDialogModule,
     MatButtonModule,  
+    RouterModule
 
   ],
   exports:[

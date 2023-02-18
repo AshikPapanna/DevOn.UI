@@ -38,27 +38,25 @@ export class ProductListComponent implements OnInit,OnDestroy {
     )
   }
   deleteItem(ele:Product){
-    const dialogRef = this.dialog.open(DialogComponent, {
-      
+    const dialogRef = this.dialog.open(DialogComponent);
+     dialogRef.componentInstance.onSubmitReason.subscribe((data) => {
+      this.delProdSub=this.dashBoardService.deleteProduct(ele.productID!).subscribe(x=>{
+        this.data=this.data.filter((x:Product)=>x.productID!==ele.productID);
+        // let dataToDis=this.dataSource.filter((x:Product)=>x.productID!==ele.productID);
+         this.dataSource.setData( this.data);
+        this.snackBar.open("Deleted Successfully.","X",{
+          horizontalPosition: 'center',
+          verticalPosition:'top',
+          duration: 2000,
+         panelClass: ['red-bg']
+  
+         });
+      });
+  
     });
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(result);
-    
-    });
+   
     return;
-    this.delProdSub=this.dashBoardService.deleteProduct(ele.productID!).subscribe(x=>{
-      this.data=this.data.filter((x:Product)=>x.productID!==ele.productID);
-      // let dataToDis=this.dataSource.filter((x:Product)=>x.productID!==ele.productID);
-       this.dataSource.setData( this.data);
-      this.snackBar.open("Deleted Successfully.","X",{
-        horizontalPosition: 'center',
-        verticalPosition:'top',
-        duration: 2000,
-       panelClass: ['red-bg']
-
-       });
-    });
-
+   
   }
 
 }
