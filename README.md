@@ -8,7 +8,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 ## Installing Packages
 
-After cloning the repo please run "npm install" in the project root folder to install all the dependent packages. 
+After cloning the repo please run `npm install` in the project root folder to install all the dependent packages. 
 
 ## Code scaffolding
 
@@ -26,7 +26,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Screens
 
-Below is the image of form to enter api key. For testing purpose use "4942956-87b1-4816-b8f5-45483fa05201"
+Below is the image of form to enter api key. For testing purpose use `4942956-87b1-4816-b8f5-45483fa05201`
 
 ![plot](./src/assets/readmeimages/ApiKeyForm.png)
 
