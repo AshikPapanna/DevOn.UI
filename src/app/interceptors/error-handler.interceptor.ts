@@ -31,7 +31,15 @@ export class ErrorHandlerInterceptor implements HttpInterceptor {
             horizontalPosition: 'center',
             verticalPosition:'top',
            })
-        }else{
+        }else if(err.status==HttpStatusCode.UnprocessableEntity){
+          
+          this.snackBar.open(  err.error,"X",{
+            horizontalPosition: 'center',
+            verticalPosition:'top',
+           })
+        
+        }else {
+          
           this.snackBar.open(  err.message,"X",{
             horizontalPosition: 'center',
             verticalPosition:'top',
