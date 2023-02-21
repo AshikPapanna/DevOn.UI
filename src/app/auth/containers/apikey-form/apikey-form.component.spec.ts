@@ -1,4 +1,7 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ReactiveFormsModule } from '@angular/forms';
+import { RouterTestingModule } from '@angular/router/testing';
 
 import { ApikeyFormComponent } from './apikey-form.component';
 
@@ -8,7 +11,8 @@ describe('ApikeyFormComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ApikeyFormComponent ]
+      declarations: [ ApikeyFormComponent ],
+      imports:[ReactiveFormsModule,HttpClientTestingModule,RouterTestingModule]
     })
     .compileComponents();
   });
