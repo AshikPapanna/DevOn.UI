@@ -1,1 +1,34 @@
-<p>product-edit works!</p>
+<form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+
+    <mat-grid-list cols="3" rowHeight="3:1">
+        <mat-grid-tile> <mat-form-field appearance="outline">
+            <mat-label>Name</mat-label>
+            <input formControlName="name" matInput placeholder="Name">
+            
+        
+          </mat-form-field></mat-grid-tile>
+        <mat-grid-tile> <mat-form-field appearance="outline">
+            <mat-label>Description</mat-label>
+            <textarea formControlName="description" matInput placeholder="Description"></textarea>
+            <mat-error *ngIf="editForm.controls['description'].invalid">{{getDescErrorMessage()}}</mat-error>
+          </mat-form-field></mat-grid-tile>
+        <mat-grid-tile><mat-form-field appearance="outline">
+            <mat-label>Quantity</mat-label>
+            <input type="number" formControlName="quantity" matInput placeholder="Quantity">
+            <mat-error *ngIf="editForm.controls['quantity'].invalid">{{getQuantityErrorMessage()}}</mat-error>
+          </mat-form-field></mat-grid-tile>
+        <mat-grid-tile><mat-form-field appearance="outline">
+            <mat-label>Category</mat-label>
+            <mat-select  [compareWith]="compareFn" formControlName="category">
+                <mat-option *ngFor="let cat of categories" value="{{cat.id}}">{{cat.name}}</mat-option>
+              
+              </mat-select>
+           
+          </mat-form-field></mat-grid-tile>
+      </mat-grid-list>
+   
+     
+      
+      
+      <button mat-raised-button type="submit" [disabled]="!editForm.valid"  color="warn">Submit</button>
+    </form>

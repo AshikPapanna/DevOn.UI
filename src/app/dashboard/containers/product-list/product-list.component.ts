@@ -18,7 +18,7 @@ export class ProductListComponent implements OnInit,OnDestroy {
   delProdSub:any;
   allProducts:any;
   data:any;
-  displayedColumns: string[] = ['productID', 'name', 'quantity', 'categoryName','created','actions'];
+  displayedColumns: string[] = ['productID', 'name', 'quantity', 'categoryName','created','actionedit','actiondel'];
   constructor(private snackBar:MatSnackBar,private dashBoardService:DashboardService,public dialog: MatDialog) { }
   dataSource:any;
   ngOnDestroy(): void {

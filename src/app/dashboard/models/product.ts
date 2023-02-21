@@ -1,6 +1,6 @@
 export interface Product {
     productID?:number,
-    name:string,
+    name?:string,
     quantity:number,
     description:string,
     categoryID:number,

@@ -19,9 +19,16 @@ export class DashboardService {
   public deleteProduct(id:number){
     return this.httpClient.delete(environment.apiPath+'product/'+id);
   }
+  public getProductById( id:any){
+    return this.httpClient.get(environment.apiPath+'product/'+id);
+}
   public getAllCategory(){
     return this.httpClient.get(environment.apiPath+'category');
 }
+public updateProduct(product:any){
+  return this.httpClient.post(environment.apiPath+'product/edit',product);
+}
+
 }
 
 // categoryID
